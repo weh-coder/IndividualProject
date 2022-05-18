@@ -22,9 +22,7 @@ public class ArrayTest {
 
     Scanner SC = new Scanner(System.in);//创建输入流对象
     public static void main(String[] args) {
-
         ArrayTest arrayTest = new ArrayTest();//初始化
-
     }
     //构造方法，获取数组元素
     public ArrayTest(){
@@ -43,14 +41,17 @@ public class ArrayTest {
 }
 
 //找出该数组最大子数组的和
+
 class Solution{
 
     public int maxSubArray(int[] nums) {
 
         int pre = 0, res = nums[0];//初始化
+
         for (int i = 0; i < nums.length; i++) {
 
             pre = Math.max(pre + nums[i], nums[i]); //比较的是两个同一类型数据的大小，获取较大的值返回
+
             res = Math.max(res, pre);
             
         }
@@ -58,7 +59,8 @@ class Solution{
     }
 }
 测试结果：
-![输入图片说明](1.jpg)
 
+
+![输入图片说明](IndividualProject/1.jpg)
 
 
